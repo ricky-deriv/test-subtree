@@ -1,0 +1,19 @@
+name: Workflow running scripts
+on: 
+  pull_request:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  run-scripts:
+    name: "run scripts"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: run scripts
+      run: |
+        echo "new addition..."
+        bash 01-echo.sh
+        echo "new addition..."
