@@ -9,6 +9,7 @@ defaults:
 jobs:
   run-scripts:
     name: "run scripts"
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: run scripts
